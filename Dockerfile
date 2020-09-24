@@ -14,14 +14,14 @@ RUN mkdir /src
 
 WORKDIR /src
 
-RUN git clone --depth 1 https://github.com/tensorflow/tensorflow.git -b ${tensorflow_version}
-
 RUN mkdir esp && cd esp && git clone --recursive https://github.com/espressif/esp-idf.git -b ${esp_idf_version}
+
+RUN git clone --depth 1 https://github.com/tensorflow/tensorflow.git -b ${tensorflow_version}
 
 RUN cd esp/esp-idf && ./install.sh
 
-RUN . esp/esp-idf/export.sh && \
+RUN IDF_PATH="/src/esp/esp-idf" . esp/esp-idf/export.sh && \
     cd tensorflow && \
-    make -f tensorflow/lite/micro/tools/make/Makefile TARGET=esp generate_hello_world_esp_project
+    IDF_PATH="/src/esp/esp-idf" make -f tensorflow/lite/micro/tools/make/Makefile TARGET=esp generate_hello_world_esp_project
 
 CMD ["cp", "-R", "/src/tensorflow/tensorflow/lite/micro/tools/make/gen/esp_xtensa-esp32/prj/hello_world/esp-idf/components/tfmicro", "/dst"]
