@@ -1,3 +1,4 @@
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Z8Z734F5Y)
 # Extract tensorflow-lite for use in platform.io with the ESP32
 
 There are a few blog posts on how to pull out tensorflow-lite for use with platform.io.
