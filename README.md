@@ -62,4 +62,8 @@ For release 2.3 of TensorFlow you will need to edit the file `lib/tfmicro/tensor
 
 If you are using the `master` branch of TensorFlow then this is not needed as the code has changed substantially.
 
+You may also get compilation errors around `std::fmax` and `std::fmin`.
+
+You will need to modify the files to use `std::max` and `std::min`.
+
 That should do it!
