@@ -22,7 +22,7 @@ docker build . -t tflite-generator --build-arg tensorflow_version=master
 And to specify the esp-idf version:
 
 ```
-docker build . -t tflite-generator --build-arg tensorflow_version=master --build-arg esp_idf_version=release/v4.0
+docker build . -t tflite-generator --build-arg tensorflow_version=master --build-arg esp_idf_version=release/v4.3
 ```
 
 This can take a considerable amount of time as the stage where it downloads `https://www.cs.toronto.edu/~kriz/cifar-10-binary.tar.gz` can take a while. Got off and make a cup of tea.
@@ -35,7 +35,7 @@ docker run -v `pwd`/lib:/dst -t tflite-generator
 
 This will copy the `tfmicro` source code for the ESP32 into a folder called `lib`.
 
-Copy the contents of the lib folder into you project's lib folder.
+Copy the contents of the lib folder into your project's lib folder.
 
 Copy the `library.json` into the `tfmicro` folder in your lib folder.
 
