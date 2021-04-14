@@ -25,6 +25,7 @@ RUN git clone --depth 1 https://github.com/tensorflow/tensorflow.git -b ${tensor
 RUN cd esp/esp-idf && ./install.sh
 
 RUN IDF_PATH="/src/esp/esp-idf" . esp/esp-idf/export.sh && \
+    pip3 install six && \
     cd tensorflow && \
     IDF_PATH="/src/esp/esp-idf" make -f tensorflow/lite/micro/tools/make/Makefile TARGET=esp generate_hello_world_esp_project
 
