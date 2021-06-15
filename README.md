@@ -33,7 +33,7 @@ This can take a considerable amount of time as the stage where it downloads `htt
 Once the docker image has been built you can copy the code out of the image using:
 
 ```
-docker run -v `pwd`/lib:/dst -t tflite-generator
+docker run -v $PWD/lib:/dst -t tflite-generator
 ```
 
 This will copy the `tfmicro` source code for the ESP32 into a folder called `lib`.
