@@ -2,7 +2,13 @@
 
 # Extract tensorflow-lite for use in platform.io with the ESP32
 
-A word of warning on this code - if you use the master release of TensorflowLite you will probably hit compilation errors as the code moves quite quickly and the Arduino framework does not. If you hit compilation errors, then it's worth trying a particular version of TensorflowList and the ESP IDF.
+A word of warning on this code - if you use the master release of TensorflowLite you will probably hit compilation errors as the code moves quite quickly and the Arduino framework does not. If you hit compilation errors, then it's worth trying a particular version of TensorflowLite and the ESP IDF.
+
+e.g.
+
+```
+docker build . -t tflite-generator --build-arg tensorflow_version=2.4.0 --build-arg esp_idf_version=release/v4.3
+```
 
 There are a few blog posts on how to pull out tensorflow-lite for use with platform.io.
 
