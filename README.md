@@ -1,11 +1,14 @@
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Z8Z734F5Y)
+
 # Extract tensorflow-lite for use in platform.io with the ESP32
+
+A word of warning on this code - if you use the master release of TensorflowLite you will probably hit compilation errors as the code moves quite quickly and the Arduino framework does not. If you hit compilation errors, then it's worth trying a particular version of TensorflowList and the ESP IDF.
 
 There are a few blog posts on how to pull out tensorflow-lite for use with platform.io.
 
 I've tried to minimise the amount of restructuring of the `tfmicro` folders in this repo by making using a `library.json` to setup include paths.
 
-This should make it easier to update to newer versions of TensorflowLite at they become available.
+This should make it easier to update to newer versions of TensorflowLite as they become available.
 
 To build the docker file run
 
