@@ -1,5 +1,8 @@
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Z8Z734F5Y)
+# This repo is now way out of date - I'll try and do an update soon.
 
+You should now go here: https://github.com/espressif/tflite-micro-esp-examples
+
+---
 # Extract tensorflow-lite for use in platform.io with the ESP32
 
 A word of warning on this code - if you use the master release of TensorflowLite you will probably hit compilation errors as the code moves quite quickly and the Arduino framework does not. If you hit compilation errors, then it's worth trying a particular version of TensorflowLite and the ESP IDF.
